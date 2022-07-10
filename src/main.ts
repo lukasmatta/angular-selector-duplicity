@@ -7,16 +7,15 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
 @Component({
   selector: 'same-name',
-  standalone: true,
-  template: 'standalone component',
+  template: 'first component',
 })
-export class StandaloneCmp {}
+export class FirstCmp {}
 
 @Component({
   selector: 'same-name',
-  template: 'component declared inside module',
+  template: 'second component',
 })
-export class SampleCmp {}
+export class SecondCmp {}
 
 @Component({
   selector: 'main-component',
@@ -28,8 +27,8 @@ export class SampleCmp {}
 export class MainComponent {}
 
 @NgModule({
-  declarations: [MainComponent, SampleCmp],
-  imports: [CommonModule, BrowserModule, StandaloneCmp],
+  declarations: [MainComponent, FirstCmp, SecondCmp],
+  imports: [CommonModule, BrowserModule],
   bootstrap: [MainComponent],
 })
 export class TestModule {}
