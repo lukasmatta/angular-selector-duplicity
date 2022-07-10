@@ -20,7 +20,7 @@ export class SecondCmp {}
 @Component({
   selector: 'main-component',
   template: `
-  <h4>I would expect warning/error about the selector collision, not standalone component rendered two times.</h4>
+  <h4>I would expect warning/error about the selector collision, not the first component rendered two times.</h4>
   <same-name></same-name>
   `,
 })
